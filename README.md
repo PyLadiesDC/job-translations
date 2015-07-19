@@ -1,2 +1,2 @@
 # job-translations
-This is where the job translations repo will go
+This is where the job translations repo will totally go
