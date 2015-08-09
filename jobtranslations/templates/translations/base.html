@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <title>PyLadiesDC Job Translations</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static "css/blog.css" %}">
+  </head>
+
+  <body>
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">
+          {% if form.errors %}
+          <p>Your email address may be invalid, please try again</p>
+          {% else %}
+          <p>Thank you for submitting a translation request. The translation should appear in your email inbox soon.
+            Feel free to submit another translation request.</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="paste">
+      <form method="POST" class="paste-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+
+  </body>
+</html>
