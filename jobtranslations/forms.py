@@ -1,7 +1,7 @@
 from django import forms
-from .models import Paste
+from .models import PasteJobURL
 
-class PasteForm(forms.ModelForm):
+class JobURLForm(forms.ModelForm):
     class Meta:
-        model = Paste
-        fields = ('job_description', 'job_qualifications', 'paster_email',)
+        model = PasteJobURL
+        fields = ('job_URL', 'email',)

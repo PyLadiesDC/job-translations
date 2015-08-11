@@ -25,18 +25,25 @@
           {% else %}
           <p>Thank you for submitting a translation request. The translation should appear in your email inbox soon.
             Feel free to submit another translation request.</p>
-          {% endif %}
+            {% endif %}
         </div>
       </div>
     </div>
 
 
-    <div class="paste">
-      <form method="POST" class="paste-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="paste">
+            <form method="POST" class="paste-form">{% csrf_token %}
+              {{ form.as_ul }}
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
+
 
   </body>
 </html>

@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Paste
+from .models import PasteJobURL
 
-admin.site.register(Paste)
+admin.site.register(PasteJobURL)
